@@ -1,0 +1,54 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": "airbnb",
+    "rules": {
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "indentSwitchCase": [
+            true
+        ],
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
+            }
+        ],
+        "react/jsx-indent": [
+            true,
+            4
+        ],
+        "react/jsx-tag-spacing": {
+            "beforeSelfClosing": "never"
+        },
+        "comma-dangle": [
+            "error",
+            "never"
+        ]
+    },
+    "parserOptions": {
+        "sourceType": "module"
+    }
+}
