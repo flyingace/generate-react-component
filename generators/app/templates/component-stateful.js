@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import './<%= componentName %>.scss';
 
 class <%= componentName %> extends React.Component {
-    constructor() {
-        super();
-    }
-
     static propTypes = {};
 
     static defaultProps = {};
+
+    constructor() {
+        super();
+    }
 
     state = {};
 
