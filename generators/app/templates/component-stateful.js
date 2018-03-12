@@ -1,25 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './<%= componentName %>.scss';
+import './<%= componentName %>.css';
 
 class <%= componentName %> extends React.Component {
-    constructor() {
-        super();
-    }
+  static propTypes = {};
 
-    static propTypes = {};
+  static defaultProps = {};
 
-    static defaultProps = {};
+  constructor() {
+    super();
+  }
+  state = {};
 
-    state = {};
-
-    render() {
-        return (
-            <div className='<%= componentName %>'>
-                This is the <%= componentName %> component.
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div className='<%= componentName %>'>
+        This is the <%= componentName %> component.
+      </div>
+    );
+  }
 }
 
 export default <%= componentName %>;

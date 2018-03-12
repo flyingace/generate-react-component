@@ -14,9 +14,9 @@ module.exports = class extends Generator {
             default: 'Component'
         },
         {
-            type: 'prompt',
+            type: 'confirm',
             name: 'stateful',
-            message: 'Will your component stateful?',
+            message: 'Will your component be stateful?',
             default: true
         }];
 
