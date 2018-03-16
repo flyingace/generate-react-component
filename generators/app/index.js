@@ -41,6 +41,11 @@ module.exports = class extends Generator {
             this.templatePath('component-stateful.tests.js'),
             this.destinationPath(`src/components/${this.props.componentName}/__tests__/${this.props.componentName}.test.js`),
             { componentName: this.props.componentName }
+        ),
+        this.fs.copyTpl(
+            this.templatePath('component-stateful.stories.js'),
+            this.destinationPath(`src/components/${this.props.componentName}/${this.props.componentName}.stories.js`),
+            { componentName: this.props.componentName }
         );
     }
 };
