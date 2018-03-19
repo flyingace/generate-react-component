@@ -1,5 +1,5 @@
 # globaledit: generator-react-component
-> Generator for creating React components with related files.
+Generator for creating React components with related files.
 
 ## Installation
 
