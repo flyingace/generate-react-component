@@ -25,7 +25,7 @@ yo react-component
 ```
 and answer the questions when prompted and the generator should add the following files and directories inside of the `components` directory:
 ```
-Component_name
+ComponentName
 |— ComponentName.jsx
 |— ComponentName.scss
 |— ComponentName.stories.js
