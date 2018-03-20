@@ -14,7 +14,7 @@ followed by
 npm link
 ```
 
-Once you've run this step you should be able to use the generator. The generator expects that your project will have the following structure:
+After `npm link` has run close the terminal window you're in and open a new one and then you should be able to use the generator. The generator expects that your project will have the following structure:
 
 ```
 root
