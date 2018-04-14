@@ -31,20 +31,20 @@ module.exports = class extends Generator {
             this.templatePath('component-stateful.js'),
             this.destinationPath(`src/components/${this.props.componentName}/${this.props.componentName}.jsx`),
             { componentName: this.props.componentName }
-        ),
+        );
         this.fs.copyTpl(
             this.templatePath('component-stateful.scss'),
             this.destinationPath(`src/components/${this.props.componentName}/${this.props.componentName}.scss`),
             { componentName: this.props.componentName }
-        ),
+        );
         this.fs.copyTpl(
             this.templatePath('component-stateful.tests.js'),
-            this.destinationPath(`src/components/${this.props.componentName}/__tests__/${this.props.componentName}.test.js`),
+            this.destinationPath(`src/components/${this.props.componentName}/__dev__/${this.props.componentName}.test.js`),
             { componentName: this.props.componentName }
-        ),
+        );
         this.fs.copyTpl(
             this.templatePath('component-stateful.stories.js'),
-            this.destinationPath(`src/components/${this.props.componentName}/${this.props.componentName}.stories.js`),
+            this.destinationPath(`src/components/${this.props.componentName}/__dev__/${this.props.componentName}.stories.js`),
             { componentName: this.props.componentName }
         );
     }

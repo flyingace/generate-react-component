@@ -2,14 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './<%= componentName %>.css';
 
-class <%= componentName %> extends React.Component {
+export default class <%= componentName %> extends React.Component {
   static propTypes = {};
 
   static defaultProps = {};
 
-  constructor() {
-    super();
-  }
   state = {};
 
   render() {
@@ -21,4 +18,3 @@ class <%= componentName %> extends React.Component {
   }
 }
 
-export default <%= componentName %>;
