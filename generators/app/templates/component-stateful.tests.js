@@ -4,6 +4,10 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import <%= componentName %> from '../<%= componentName %>';
 
-it('renders without crashing', () => {
-  shallow(<<%= componentName %> />);
+describe('<%= componentName %>', () => {
+
+  test('renders without crashing', () => {
+    const Component = shallow(<<%= componentName %> />);
+  });
+
 });
