@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
 import <%= componentName %> from '../<%= componentName %>';
 
 describe('<%= componentName %>', () => {
@@ -10,4 +11,8 @@ describe('<%= componentName %>', () => {
     const Component = shallow(<<%= componentName %> />);
   });
 
+  it('matches its existing snapshot', () => {
+    const snapshot = renderer.create(<<%= componentName %> />).toJSON();
+    expect(snapshot).toMatchSnapshot();
+  });
 });
