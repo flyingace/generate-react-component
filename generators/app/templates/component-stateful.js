@@ -11,10 +11,9 @@ export default class <%= componentName %> extends React.Component {
 
   render() {
     return (
-      <div className='<%= componentName %>'>
+      <div className="">
         This is the <%= componentName %> component.
       </div>
     );
   }
 }
-

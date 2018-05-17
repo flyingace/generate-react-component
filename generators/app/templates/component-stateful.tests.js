@@ -17,7 +17,7 @@ describe('<%= componentName %>', () => {
 /* Test that it renders properly */
 
   test('renders without crashing', () => {
-    const Component = shallow(<<%= componentName %> />);
+    const component = shallow(<<%= componentName %> />);
   });
 
   it('matches its existing snapshot', () => {
