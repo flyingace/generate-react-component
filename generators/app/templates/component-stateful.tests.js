@@ -14,17 +14,10 @@ https://daveceddia.com/getting-started-with-tdd-in-react/
 
 describe('<%= componentName %>', () => {
 
-/* Test that it renders properly */
-
-  test('renders without crashing', () => {
-    const component = shallow(<<%= componentName %> />);
-  });
-
-  it('matches its existing snapshot', () => {
+  test('matches its existing snapshot', () => {
     const snapshot = renderer.create(<<%= componentName %> />).toJSON();
     expect(snapshot).toMatchSnapshot();
   });
-});
 
 /* Test the output */
 
@@ -35,3 +28,5 @@ describe('<%= componentName %>', () => {
 /* Test the edge cases */
 
 /* Optionally, test that no errors are printed to the console */
+
+});

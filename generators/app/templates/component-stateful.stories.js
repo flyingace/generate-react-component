@@ -1,4 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
+/* eslint no-unused-vars: ["error", { "varsIgnorePattern": "action" }] */
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
@@ -10,4 +11,4 @@ storiesOf('<%= componentName %>', module)
   .addDecorator(backgrounds)
   .add('<%= componentName %>', () => {
     return (<<%= componentName %> />);
-});
+  });
