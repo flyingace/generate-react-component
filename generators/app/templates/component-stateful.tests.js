@@ -5,28 +5,32 @@ import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 import <%= componentName %> from '../<%= componentName %>';
 
-/*
-What to Test?
-In comments are some general guidelines for what to test in a React component.
-These came from Getting Started with TDD in React:
-https://daveceddia.com/getting-started-with-tdd-in-react/
-*/
+const initialProps = {
+};
+
+const setup = propOverrides => {
+  const props = Object.assign({}, initialProps, propOverrides);
+  const Component = shallow(<<%= componentName %> {...props} />);
+
+    return {
+    props,
+    Component,
+  };
+};
+
 
 describe('<%= componentName %>', () => {
 
-  test('matches its existing snapshot', () => {
-    const snapshot = renderer.create(<<%= componentName %> />).toJSON();
-    expect(snapshot).toMatchSnapshot();
+  //It renders
+  it('renders without crashing', () => {
+    const { props } = setup();
+    shallow(<<%= componentName %> {...props} />);
   });
 
-/* Test the output */
-
-/* Test the states */
-
-/* Test the events */
-
-/* Test the edge cases */
-
-/* Optionally, test that no errors are printed to the console */
-
+  //It matches its snapshot
+  it('matches its existing snapshot', () => {
+    const { props } = setup();
+    const snapshot = renderer.create(<<%= componentName %> {...props} />).toJSON();
+    expect(snapshot).toMatchSnapshot();
+  });
 });
