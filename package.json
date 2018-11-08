@@ -8,9 +8,16 @@
     "email": "dc@davidcameron.biz",
     "url": ""
   },
-  "files": ["generators"],
+  "files": [
+    "generators"
+  ],
   "main": "generators/index.js",
-  "keywords": ["React", "Yeoman", "Generator", "yeoman-generator"],
+  "keywords": [
+    "React",
+    "Yeoman",
+    "Generator",
+    "yeoman-generator"
+  ],
   "devDependencies": {
     "coveralls": "^3.0.1",
     "eslint": "^4.19.1",
@@ -23,7 +30,7 @@
     "eslint-plugin-react": "^7.8.2",
     "husky": "^0.14.3",
     "jest": "^21.0.0",
-    "jest-cli": "^22.4.3",
+    "jest-cli": "^23.6.0",
     "lint-staged": "^4.2.1",
     "nsp": "^3.2.1",
     "prettier": "^1.12.1",
@@ -45,11 +52,20 @@
     "test": "jest"
   },
   "lint-staged": {
-    "*.js": ["eslint --fix", "git add"],
-    "*.json": ["prettier --write", "git add"]
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "eslintConfig": {
-    "extends": ["xo", "prettier"],
+    "extends": [
+      "xo",
+      "prettier"
+    ],
     "env": {
       "jest": true,
       "node": true
@@ -63,7 +79,9 @@
         }
       ]
     },
-    "plugins": ["prettier"]
+    "plugins": [
+      "prettier"
+    ]
   },
   "repository": "ICSoftware/generator-react-component",
   "license": "Apache-2.0"
