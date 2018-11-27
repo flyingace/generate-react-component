@@ -1,38 +1,38 @@
-# generator-react-component [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-> Generator for creating React components with related files.
+# globaledit: generator-react-component
+Generator for creating React components with related files.
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-react-component using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+Because this generator is currently still in development, the normal process of installing it as an npm package will not work. Instead you will have to follow these steps:
 
+First, install [Yeoman](http://yeoman.io) and clone this repo to your machine. Then cd into the `generator-react-component` directory and run
 ```bash
-npm install -g yo
-npm install -g generator-react-component
+npm install
+```
+followed by
+```bash
+npm link
 ```
 
-Then generate your new component:
+After `npm link` has run close the terminal window you're in and open a new one and then you should be able to use the generator. The generator expects that your project will have the following structure:
+
+```
+root
+|— src
+  |— components
+```
+So cd into the root directory of your project and run
 
 ```bash
 yo react-component
 ```
-
-## Getting To Know Yeoman
-
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
-
-## License
-
-Apache-2.0 © [flyingace]()
-
-
-[npm-image]: https://badge.fury.io/js/generator-react-component.svg
-[npm-url]: https://npmjs.org/package/generator-react-component
-[travis-image]: https://travis-ci.org/flyingace/generator-react-component.svg?branch=master
-[travis-url]: https://travis-ci.org/flyingace/generator-react-component
-[daviddm-image]: https://david-dm.org/flyingace/generator-react-component.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/flyingace/generator-react-component
-[coveralls-image]: https://coveralls.io/repos/flyingace/generator-react-component/badge.svg
-[coveralls-url]: https://coveralls.io/r/flyingace/generator-react-component
+and answer the questions when prompted and the generator should add the following files and directories inside of the `components` directory:
+```
+ComponentName
+|— ComponentName.jsx
+|— ComponentName.scss
+|— ComponentName.stories.js
+|— __tests__
+   |— ComponentName.test.js
+```
+*Note: Currently the generator will only generate stateful components.* Adding a generator for stateless functional components is on the roadmap but is currently not a priority.
