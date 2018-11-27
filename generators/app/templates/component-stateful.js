@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './<%= componentName %>.css';
+import './<%= componentName %>.scss';
 
 export default class <%= componentName %> extends React.Component {
   static propTypes = {};

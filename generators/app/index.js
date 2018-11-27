@@ -27,10 +27,18 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    const templatePath = (this.props.stateful) ? 'component-stateful.js' : 'component-stateless.js';
+    let componentTemplatePath;
+    let testTemplatePath;
+    if (this.props.stateful) {
+      componentTemplatePath = 'component-stateful.js';
+      testTemplatePath = 'component-stateful.tests.js';
+    } else {
+      componentTemplatePath = 'component-stateless.js';
+      testTemplatePath = 'component-stateless.tests.js';
+    }
 
     this.fs.copyTpl(
-      this.templatePath(templatePath),
+      this.templatePath(componentTemplatePath),
       this.destinationPath(`src/components/${this.props.componentName}/${this.props.componentName}.jsx`),
       {componentName: this.props.componentName}
     );
@@ -40,7 +48,7 @@ module.exports = class extends Generator {
       {componentName: this.props.componentName}
     );
     this.fs.copyTpl(
-      this.templatePath('component-stateful.tests.js'),
+      this.templatePath(testTemplatePath),
       this.destinationPath(`src/components/${this.props.componentName}/__dev__/${this.props.componentName}.test.js`),
       {componentName: this.props.componentName}
     );
