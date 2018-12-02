@@ -31,7 +31,6 @@ and answer the questions when prompted and the generator should add the followin
 ComponentName
 |— ComponentName.jsx
 |— ComponentName.scss
-|— ComponentName.stories.js
 |— __tests__
    |— ComponentName.test.js
 ```
