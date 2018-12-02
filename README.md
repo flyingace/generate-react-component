@@ -35,4 +35,3 @@ ComponentName
 |— __tests__
    |— ComponentName.test.js
 ```
-*Note: Currently the generator will only generate stateful components.* Adding a generator for stateless functional components is on the roadmap but is currently not a priority.
