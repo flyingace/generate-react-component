@@ -28,9 +28,9 @@ describe('<%= componentName %>', () => {
   });
 
   //It matches its snapshot
-  it('matches its existing snapshot', () => {
-    const { props } = setup();
-    const snapshot = renderer.create(<<%= componentName %> {...props} />).toJSON();
-    expect(snapshot).toMatchSnapshot();
-  });
+  // it('matches its existing snapshot', () => {
+  //   const { props } = setup();
+  //   const snapshot = renderer.create(<<%= componentName %> {...props} />).toJSON();
+  //   expect(snapshot).toMatchSnapshot();
+  // });
 });
