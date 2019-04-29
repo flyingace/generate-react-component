@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './<%= componentName %>.scss';
 
 /* <%= componentName %> */
-export const <%= componentName %> = (props) => {
+export default function <%= componentName %>(props) {
   const {} = props;
 
   return (
