@@ -18,73 +18,10 @@
     "Generator",
     "yeoman-generator"
   ],
-  "devDependencies": {
-    "coveralls": "^3.0.3",
-    "cryptiles": "^4.1.3",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-config-prettier": "^2.10.0",
-    "eslint-config-xo": "^0.18.2",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-prettier": "^2.7.0",
-    "eslint-plugin-react": "^7.12.4",
-    "husky": "^0.14.3",
-    "jest": "^21.0.0",
-    "jest-cli": "^23.6.0",
-    "lint-staged": "^4.2.1",
-    "nsp": "^3.2.1",
-    "prettier": "^1.16.4",
-    "yeoman-assert": "^3.1.1",
-    "yeoman-test": "^1.9.1"
-  },
   "dependencies": {
-    "chalk": "^2.4.2",
-    "lodash": "^4.17.11",
+    "chalk": "^3.0.0",
+    "lodash": "^4.17.19",
     "yeoman-generator": "^2.0.5",
     "yosay": "^2.0.2"
-  },
-  "jest": {
-    "testEnvironment": "node"
-  },
-  "scripts": {
-    "prepublish": "npm audit --audit-level high",
-    "pretest": "eslint .",
-    "precommit": "lint-staged",
-    "test": "jest"
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.json": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "xo",
-      "prettier"
-    ],
-    "env": {
-      "jest": true,
-      "node": true
-    },
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "singleQuote": true,
-          "printWidth": 90
-        }
-      ]
-    },
-    "plugins": [
-      "prettier"
-    ]
-  },
-  "repository": "ICSoftware/generator-react-component",
-  "license": "Apache-2.0"
+  }
 }

@@ -1,4 +1,4 @@
-# globaledit: generator-react-component
+# generator-react-component
 Generator for creating React components with related files.
 
 ## Installation
@@ -26,7 +26,7 @@ So cd into the root directory of your project and run
 ```bash
 yo react-component
 ```
-and answer the questions when prompted and the generator should add the following files and directories inside of the `components` directory:
+and answer the questions when prompted. The generator should add the following files and directories inside of the `components` directory:
 ```
 ComponentName
 |— ComponentName.jsx
