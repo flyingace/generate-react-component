@@ -1,4 +1,4 @@
-# globaledit: generator-react-component
+# generator-react-component
 Generator for creating React components with related files.
 
 ## Installation
