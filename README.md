@@ -1,11 +1,11 @@
-# generator-react-component
+# generator-vue-component
 Generator for creating React components with related files.
 
 ## Installation
 
 Because this generator is currently still in development, the normal process of installing it as an npm package will not work. Instead you will have to follow these steps:
 
-First, install [Yeoman](http://yeoman.io) and clone this repo to your machine. Then cd into the `generator-react-component` directory and run
+First, install [Yeoman](http://yeoman.io) and clone this repo to your machine. Then cd into the `generator-vue-component` directory and run
 ```bash
 npm install
 ```
@@ -24,13 +24,14 @@ root
 So cd into the root directory of your project and run
 
 ```bash
-yo react-component
+yo vue-component
 ```
 and answer the questions when prompted and the generator should add the following files and directories inside of the `components` directory:
 ```
-ComponentName
-|— ComponentName.jsx
-|— ComponentName.scss
-|— __tests__
-   |— ComponentName.test.js
+component-name
+|— pascalComponentName.ts
+|— pascalComponentName.vue
+|— pascalComponentName.scss
+|— pascalComponentName.spec.ts
+|— index.ts
 ```
