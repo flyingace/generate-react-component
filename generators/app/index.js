@@ -5,7 +5,7 @@ const yosay = require('yosay');
 module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
-    this.log(yosay(`Welcome to the primo ${chalk.red('ge react-component')} generator!`));
+    this.log(yosay(`Welcome to the primo ${chalk.red('generate-react-component')}component generator!`));
 
     const prompts = [{
       type: 'input',
