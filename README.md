@@ -5,7 +5,8 @@ Generator for creating React components with related files.
 
 Because this generator is currently still in development, the normal process of installing it as an npm package will not work. Instead you will have to follow these steps:
 
-First, install [Yeoman](http://yeoman.io) and clone this repo to your machine. Then cd into the `generator-react-component` directory and run
+First, install [Yeoman](http://yeoman.io) and clone this repo to your 
+machine. Then cd into the `generate-react-component` directory and run
 ```bash
 npm install
 ```
@@ -30,7 +31,6 @@ and answer the questions when prompted. The generator should add the following f
 ```
 ComponentName
 |— ComponentName.jsx
-|— ComponentName.scss
 |— __tests__
    |— ComponentName.test.js
 ```

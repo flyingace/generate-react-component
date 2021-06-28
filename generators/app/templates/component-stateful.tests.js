@@ -1,36 +1,22 @@
-/* eslint-env jest */
-
 import React from 'react';
-import { shallow } from 'enzyme';
-import renderer from 'react-test-renderer';
+import { cleanup, render, screen } from '@testing-library/react';
 import <%= componentName %> from '../<%= componentName %>';
+describe('NavigationSection', () => {
 
-const initialProps = {
-};
-
-const setup = propOverrides => {
-  const props = Object.assign({}, initialProps, propOverrides);
-  const Component = shallow(<<%= componentName %> {...props} />);
-
-    return {
-    props,
-    Component,
-  };
-};
-
-
-describe('<%= componentName %>', () => {
-
-  //It renders
-  it('renders without crashing', () => {
-    const { props } = setup();
-    shallow(<<%= componentName %> {...props} />);
+  let props;
+  beforeEach(() => {
+    props = {
+      functionProp: jest.fn(),
+      stringProp: 'String Prop',
+    };
   });
 
-  //It matches its snapshot
-  // it('matches its existing snapshot', () => {
-  //   const { props } = setup();
-  //   const snapshot = renderer.create(<<%= componentName %> {...props} />).toJSON();
-  //   expect(snapshot).toMatchSnapshot();
-  // });
+  afterEach(cleanup);
+
+describe('<%= componentName %>', () => {
+  it('renders as expected', () => {
+    render(
+      <<%= componentName %> {...props} />
+    );
+  });
 });
