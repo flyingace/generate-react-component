@@ -17,7 +17,7 @@ module.exports = class extends Generator {
       type: 'confirm',
       name: 'stateful',
       message: 'Will your component be stateful?',
-      default: true
+      default: false
     }];
 
     return this.prompt(prompts).then((props) => {
@@ -27,32 +27,33 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    let storyTemplatePath = 'component.stories.js';
-    let componentTemplatePath = 'component-stateless.js';
-    let testTemplatePath = 'component-stateless.tests.js';
+    let componentTemplatePath = 'component-stateless.tsx';
+    let storyTemplatePath = 'component.stories.ts';
+    let stylesTemplatePath = 'component.styles.ts';
+    let testTemplatePath = 'component-stateless.tests.ts';
     if (this.props.stateful) {
-      componentTemplatePath = 'component-stateful.js';
-      testTemplatePath = 'component-stateful.tests.js';
+      componentTemplatePath = 'component-stateful.tsx';
+      testTemplatePath = 'component-stateful.tests.ts';
     }
 
     this.fs.copyTpl(
       this.templatePath(componentTemplatePath),
-      this.destinationPath(`src/components/${this.props.componentName}/${this.props.componentName}.jsx`),
+      this.destinationPath(`src/components/${this.props.componentName}/${this.props.componentName}.tsx`),
       {componentName: this.props.componentName}
     );
-    // this.fs.copyTpl(
-    //   this.templatePath('component-stateful.scss'),
-    //   this.destinationPath(`src/components/${this.props.componentName}/${this.props.componentName}.scss`),
-    //   {componentName: this.props.componentName}
-    // );
     this.fs.copyTpl(
       this.templatePath(testTemplatePath),
-      this.destinationPath(`src/components/${this.props.componentName}/__dev__/${this.props.componentName}.test.js`),
+      this.destinationPath(`src/components/${this.props.componentName}/__dev__/${this.props.componentName}.test.ts`),
       {componentName: this.props.componentName}
     );
     this.fs.copyTpl(
       this.templatePath(storyTemplatePath),
-      this.destinationPath(`src/components/${this.props.componentName}/__dev__/${this.props.componentName}.stories.js`),
+      this.destinationPath(`src/components/${this.props.componentName}/__dev__/${this.props.componentName}.stories.ts`),
+      {componentName: this.props.componentName}
+    );
+    this.fs.copyTpl(
+      this.templatePath(stylesTemplatePath),
+      this.destinationPath(`src/components/${this.props.componentName}/${this.props.componentName}.styles.ts`),
       {componentName: this.props.componentName}
     );
   }

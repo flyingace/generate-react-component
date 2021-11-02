@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components/macro';
-
+import * as S from './<%= componentName %>.styles';
 
 /* <%= componentName %> */
 export default function <%= componentName %>(props) {

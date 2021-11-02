@@ -30,7 +30,8 @@ yo react-component
 and answer the questions when prompted. The generator should add the following files and directories inside of the `components` directory:
 ```
 ComponentName
-|— ComponentName.jsx
+|— ComponentName.tsx
+|- ComponentName.styles.ts
 |— __tests__
-   |— ComponentName.test.js
+   |— ComponentName.test.ts
 ```
