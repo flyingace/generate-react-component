@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import * as S from './<%= componentName %>.styles';
 
 /* <%= componentName %> */
@@ -11,12 +10,6 @@ export default function <%= componentName %>(props) {
       This is the stateless <%= componentName %> component.
     </React.Fragment>
   );
-};
-
-<%= componentName %>.propTypes = {
-};
-
-<%= componentName %>.defaultProps = {
 };
 /* */
 

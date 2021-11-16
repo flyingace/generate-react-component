@@ -28,7 +28,7 @@ module.exports = class extends Generator {
 
   writing() {
     let componentTemplatePath = 'component-stateless.tsx';
-    let storyTemplatePath = 'component.stories.ts';
+    let storyTemplatePath = 'component.stories.js';
     let stylesTemplatePath = 'component.styles.ts';
     let testTemplatePath = 'component-stateless.tests.ts';
     if (this.props.stateful) {
