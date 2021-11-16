@@ -32,6 +32,7 @@ and answer the questions when prompted. The generator should add the following f
 ComponentName
 |— ComponentName.tsx
 |- ComponentName.styles.ts
-|— __tests__
+|— __dev__
    |— ComponentName.test.ts
+   |— ComponentName.stories.js
 ```
