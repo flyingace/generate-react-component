@@ -1,14 +1,17 @@
-import React from 'react';
 import * as S from './<%= componentName %>.styles';
 
+export type <%= componentName %>Props = {}
+
 /* <%= componentName %> */
-export default function <%= componentName %>(props) {
-  const {} = props;
+export default function <%= componentName %>(props: <%= componentName %>Props) {
+  const {
+    /* destructured props */
+  } = props;
 
   return (
-    <React.Fragment>
-      This is the stateless <%= componentName %> component.
-    </React.Fragment>
+    <S.<%= componentName %>>
+      This is the styled & stateless <%= componentName %> component.
+    </S.<%= componentName %>>
   );
 };
 /* */
