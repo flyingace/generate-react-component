@@ -1,4 +1,4 @@
-import <%= componentName %> from './<%= componentName %>';
+import <%= componentName %> from '../<%= componentName %>';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 export default {
@@ -8,7 +8,7 @@ export default {
 
 // TODO: Delete this line after replacing `any` with the proper type for `args`
 const Template: ComponentStory<typeof <%= componentName %>> = (args: any) => {
-  <<%= componentName %> {...args} />
+  return <<%= componentName %> {...args} />
 }
 
 export const Default = Template.bind({});

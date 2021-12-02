@@ -28,7 +28,7 @@ module.exports = class extends Generator {
 
   writing() {
     let componentTemplatePath = 'component-stateless.tsx';
-    let storyTemplatePath = 'component.stories.ts';
+    let storyTemplatePath = 'component.stories.tsx';
     let stylesTemplatePath = 'component.styles.ts';
     let testTemplatePath = 'component-stateless.tests.ts';
     if (this.props.stateful) {
@@ -48,7 +48,7 @@ module.exports = class extends Generator {
     );
     this.fs.copyTpl(
       this.templatePath(storyTemplatePath),
-      this.destinationPath(`src/components/${this.props.componentName}/__dev__/${this.props.componentName}.stories.ts`),
+      this.destinationPath(`src/components/${this.props.componentName}/__dev__/${this.props.componentName}.stories.tsx`),
       {componentName: this.props.componentName}
     );
     this.fs.copyTpl(
