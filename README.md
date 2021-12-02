@@ -34,5 +34,5 @@ ComponentName
 |- ComponentName.styles.ts
 |— __dev__
    |— ComponentName.test.ts
-   |— ComponentName.stories.js
+   |— ComponentName.stories.ts
 ```
