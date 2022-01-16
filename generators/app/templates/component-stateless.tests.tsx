@@ -2,7 +2,7 @@
 import { cleanup, render } from '@testing-library/react';
 import <%= componentName %> from '../<%= componentName %>';
 
-let props;
+let props:<%= componentName %>Props;
 
 beforeEach(() => {
   props = {};
