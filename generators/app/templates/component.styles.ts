@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro';
 
-// TODO: Delete this line after replacing `p` with the proper element
-export const <%= componentName %> = styled.p`
+// TODO: Delete this line after replacing `div` with the proper element
+export const <%= componentName %> = styled.div`
     `
