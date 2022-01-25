@@ -8,8 +8,6 @@ beforeEach(() => {
   props = {};
 });
 
-afterEach(cleanup);
-
 describe('<%= componentName %>', () => {
   it('renders as expected', () => {
     render(<<%= componentName %> {...props} />);
