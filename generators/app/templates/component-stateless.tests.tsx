@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import { cleanup, render } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import <%= componentName %>, {<%= componentName %>Props} from '../<%= componentName %>';
 
 let props:<%= componentName %>Props;
