@@ -3,5 +3,6 @@ node_modules
 /node_modules
 .DS_Store
 .idea
-package-lock.json
 __tests__
+
+package-lock.json
