@@ -1,15 +1,22 @@
 /* eslint-env jest */
-import { render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import <%= componentName %>, {<%= componentName %>Props} from '../<%= componentName %>';
+import { renderWithProviders } from 'lib/test/test-utility-functions';
 
-let props:<%= componentName %>Props;
-
-beforeEach(() => {
-  props = {};
-});
+const setup = (props?: <%= componentName %>Props) => {
+  const currentProps: <%= componentName %>Props = {
+    ...props,
+  };
+  const user = userEvent.setup();
+  const utils = renderWithProviders(<<%= componentName %> {...currentProps} />);
+  return {
+    ...utils,
+    user,
+  };
+};
 
 describe('<%= componentName %>', () => {
-  test('it renders as expected', () => {
-    render(<<%= componentName %> {...props} />);
+  test('it renders without errors', () => {
+    setup();
   });
 });
