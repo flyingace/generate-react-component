@@ -12,13 +12,8 @@ module.exports = class extends Generator {
       name: 'componentName',
       message: 'What will the name of your component be?',
       default: 'Component'
-    },
-    {
-      type: 'confirm',
-      name: 'stateful',
-      message: 'Will your component be stateful?',
-      default: false
-    }];
+    }
+];
 
     return this.prompt(prompts).then((props) => {
       // To access props later use this.props.someAnswer;
@@ -31,10 +26,6 @@ module.exports = class extends Generator {
     let storyTemplatePath = 'component.stories.tsx';
     let stylesTemplatePath = 'component.styles.ts';
     let testTemplatePath = 'component-stateless.tests.tsx';
-    if (this.props.stateful) {
-      componentTemplatePath = 'component-stateful.tsx';
-      testTemplatePath = 'component-stateful.tests.tsx';
-    }
 
     this.fs.copyTpl(
       this.templatePath(componentTemplatePath),
